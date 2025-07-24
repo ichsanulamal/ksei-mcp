@@ -65,7 +65,30 @@ A Model Context Protocol (MCP) server that provides access to KSEI (Kustodian Se
 
 ## Usage
 
-**Use in conversations**:
+### MCP Client Integration
+
+1. **Add MCP config**:
+   
+   Edit `mcp.json`:
+
+   ```json
+   {
+     "mcpServers": {
+       "ksei": {
+         "command": "python",
+         "args": ["/path/to/ksei-mcp/ksei_mcp.py"],
+         "env": {
+           "PYTHONPATH": "/path/to/ksei-mcp",
+           "KSEI_USERNAME": "your-email@domain.com",
+           "KSEI_PASSWORD": "your-password",
+           "KSEI_AUTH_PATH": "~/.cache/ksei-mcp/auth"
+         }
+       }
+     }
+   }
+   ```
+
+2. **Use in conversations**:
    ```
    Show me my KSEI portfolio summary
    What are my current cash balances?
@@ -285,7 +308,7 @@ python ksei_mcp.py
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📦 Acknowledgements / Origin
+## Acknowledgements / Origin
 
 This project is a Python adaptation of [**goksei**](https://github.com/chickenzord/goksei) by [@chickenzord](https://github.com/chickenzord), originally written in Go.
 
