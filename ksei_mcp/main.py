@@ -19,11 +19,9 @@ from mcp.types import (
 import mcp.types as types
 
 # Import your existing KSEI client
-import sys
 import os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from ksei_client import Client, FileAuthStore, PortfolioType
+from .ksei_client import Client, FileAuthStore, PortfolioType
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -305,5 +303,5 @@ async def main():
             ),
         )
 
-if __name__ == "__main__":
+def run():
     asyncio.run(main())
