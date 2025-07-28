@@ -137,3 +137,7 @@ Licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 This software is intended for **educational and personal use only**. Users are responsible for complying with KSEI's terms of service and all relevant regulations.
 
 > **Note**: This is an **unofficial client** for KSEI services. It is not affiliated with or endorsed by KSEI.
+
+### Acknowledgement
+
+This project is an adaptation from [chickenzord/goksei](https://github.com/chickenzord/goksei). Many thanks to the original author for their work and inspiration.
